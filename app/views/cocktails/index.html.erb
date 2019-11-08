@@ -1,0 +1,19 @@
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1531279550271-23c2a77a765c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80);">
+    <div class="container">
+      <h1>The Watering Hole<span>_</span></h1>
+      <p>Come and have a drink</p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <% @cocktails.each do |c| %>
+        <div class="col-4 p-3">
+          <%= link_to cocktail_path(c) do %>
+            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+              <h2><%= "#{c.name}" %></h2>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>

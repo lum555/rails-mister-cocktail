@@ -4,12 +4,40 @@
     <title>RailsMisterCocktail</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Share&display=swap" rel="stylesheet">
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <% if flash[:notice] %>
+      <div class="notice"><%= flash[:notice] %></div>
+    <% end %>
+    <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+      <a class="navbar-brand" href="#">
+        <img src="https://png2.cleanpng.com/sh/43ad42e647cce2ce50435e3f1db0859e/L0KzQYm3UsIyN6d8fZH0aYP2gLBuTfNwa5x5edt1LX3kgsXwjvkua5J3jNH4bj35dbT7jCIueJJuhuZuZD31dbW0gB9kc6Vmgd42NXG7dIK9g8AxP2I4TKk3MUe2R4K5VsAyPWIASasAOESzQIOCTwBvbz==/kisspng-cocktail-martini-cartoon-vector-painted-red-cocktail-5a8d16c0071347.173712601519195840029.png" />
+    </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Add</a>
+          </li>
+        </ul>
+      </div>
+    </div>
     <%= yield %>
+    <%= javascript_include_tag "application" %>
+    <%= javascript_pack_tag "application" %>
   </body>
 </html>

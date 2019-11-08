@@ -1,0 +1,21 @@
+.navbar-lewagon {
+  justify-content: space-between;
+  background: #111212;
+}
+
+.navbar-lewagon .navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar-lewagon .navbar-brand img {
+  width: 40px;
+  background-color: transparent;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: rgba(200, 200, 200, 0.5);
+}
+
+.navbar-light .navbar-nav .active > .nav-link {
+  color: rgba(255, 255, 255, 0.5);
+}

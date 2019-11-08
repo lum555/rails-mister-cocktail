@@ -1,0 +1,8 @@
+<div class="container">
+<%= simple_form_for [@cocktail, @dose] do |f| %>
+  <%= f.input :description %>
+  <%= f.association :ingredient %>
+  <%= f.button :submit, "Submit", class: 'btn btn-warning' %>
+  <%= link_to "Return to cocktail", cocktail_path(@cocktail), :class => "btn btn-default btn-info"  %>
+<% end %>
+</div>
